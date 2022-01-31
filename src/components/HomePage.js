@@ -1,7 +1,7 @@
 import React from 'react';
 import Banner from '../asset/Banner.jpeg';
 
-const HomePage = () => {
+const HomePage = () => (
   <main>
     <div className="banner-div">
       <img src={Banner} alt="COVID-19" className="img-banner" />
@@ -11,7 +11,7 @@ const HomePage = () => {
         Over the world
       </h2>
     </div>
-  </main>;
-};
+  </main>
+);
 
 export default HomePage;
