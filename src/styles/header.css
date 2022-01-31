@@ -1,0 +1,6 @@
+.header-top {
+  display: flex;
+  justify-content: center;
+  background-color: #26439f;
+  color: #fff;
+}
