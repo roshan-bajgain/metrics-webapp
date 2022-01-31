@@ -1,0 +1,5 @@
+.banner-div {
+  display: flex;
+  background-color: rgb(25, 54, 150);
+  justify-content: space-between;
+}
