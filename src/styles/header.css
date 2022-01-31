@@ -3,7 +3,7 @@
 .header-top {
   display: flex;
   justify-content: center;
-  background-color: #26439f;
+  background-color: rgb(189, 51, 104);
   color: #fff;
 }
 

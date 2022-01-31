@@ -4,7 +4,7 @@ import { BsFillMicFill } from '@react-icons/all-files/bs/BsFillMicFill';
 import { IoIosSettings } from '@react-icons/all-files/io/IoIosSettings';
 
 const Header = (props) => {
-  const heading = props;
+  const { heading } = props;
   return (
     <header className="header">
       <div className="header-top">
