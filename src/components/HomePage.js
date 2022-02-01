@@ -1,8 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { v4 as uuidv4 } from 'uuid';
 import Banner from '../asset/Banner.jpg';
+import { fetchDataApi } from '../redux/covid19Data/covid19Data';
 
-const HomePage = () => (
-  <main>
+const HomePage = () => {
+  const covidData = useSelector((state) => state.covid19Data);
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(fetchDataApi());
+  }, [dispatch]);
+  return(
+    <main>
     <div className="banner-div">
       <img src={Banner} alt="COVID-19" className="img-banner" />
       <h2 className="banner-h2">
@@ -17,6 +26,7 @@ const HomePage = () => (
       <h4 className="search-bar-h4">STATS BY COUNTRY</h4>
     </div>
   </main>
-);
+  )
+};
 
 export default HomePage;
