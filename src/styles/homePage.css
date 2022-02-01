@@ -37,3 +37,8 @@
   padding: 10px;
   border-radius: 15px;
 }
+
+.categories {
+  display: flex;
+  flex-wrap: wrap;
+}
