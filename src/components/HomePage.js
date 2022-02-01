@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
 import Banner from '../asset/Banner.jpg';
 import { fetchDataApi } from '../redux/covid19Data/covid19Data';
+import Categories from './homePageComponents/Categories';
 
 const HomePage = () => {
   const covidData = useSelector((state) => state.covid19Data);
@@ -25,6 +26,13 @@ const HomePage = () => {
       <input type="text" placeholder="Search" className="search-bar-input" />
       <h4 className="search-bar-h4">STATS BY COUNTRY</h4>
     </div>
+    <div className="categories">
+        {
+          covidData.map((data) => (
+            <Categories key={uuidv4()} data={data} />
+          ))
+      }
+      </div>
   </main>
   )
 };
