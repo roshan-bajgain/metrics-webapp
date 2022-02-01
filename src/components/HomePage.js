@@ -9,7 +9,9 @@ const HomePage = () => {
   const covidData = useSelector((state) => state.covid19Data);
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(fetchDataApi());
+    if (covidData.Countries.length === 0) {
+      dispatch(fetchDataApi());
+    }
   }, [dispatch]);
   return (
     <main>

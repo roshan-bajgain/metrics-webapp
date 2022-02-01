@@ -4,20 +4,21 @@ const baseUrl = 'https://api.covid19api.com/summary';
 
 const FETCH_DATA = 'covidMetrics/covid19Data/FETCH_DATA';
 
+// initial-state
+const initialState = [];
+
 // action
 const fetchData = (payload) => ({
   type: FETCH_DATA,
   payload,
 });
 
+// api function
 export const fetchDataApi = () => async (dispatch) => {
   const returnValue = await Axios.get(baseUrl);
-  const { data } = returnValue;
-  dispatch(fetchData(data));
+  const { data: { Countries } } = returnValue;
+  dispatch(fetchData(Countries));
 };
-
-// initial-state
-const initialState = [];
 
 // reducer
 const reducer = (state = initialState, action) => {
