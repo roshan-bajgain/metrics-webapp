@@ -11,30 +11,30 @@ const HomePage = () => {
   useEffect(() => {
     dispatch(fetchDataApi());
   }, [dispatch]);
-  return(
+  return (
     <main>
-    <div className="banner-div">
-      <img src={Banner} alt="COVID-19" className="img-banner" />
-      <h2 className="banner-h2">
-        COVID19 statestics
-        <br />
-        Over the world
-      </h2>
-    </div>
-    <div className="search-bar">
-      <h3 className="search-bar-h3">Search</h3>
-      <input type="text" placeholder="Search" className="search-bar-input" />
-      <h4 className="search-bar-h4">STATS BY COUNTRY</h4>
-    </div>
-    <div className="categories">
+      <div className="banner-div">
+        <img src={Banner} alt="COVID-19" className="img-banner" />
+        <h2 className="banner-h2">
+          COVID19 statestics
+          <br />
+          Over the world
+        </h2>
+      </div>
+      <div className="search-bar">
+        <h3 className="search-bar-h3">Search</h3>
+        <input type="text" placeholder="Search" className="search-bar-input" />
+        <h4 className="search-bar-h4">STATS BY COUNTRY</h4>
+      </div>
+      <div className="categories">
         {
           covidData.map((data) => (
             <Categories key={uuidv4()} data={data} />
           ))
       }
       </div>
-  </main>
-  )
+    </main>
+  );
 };
 
 export default HomePage;

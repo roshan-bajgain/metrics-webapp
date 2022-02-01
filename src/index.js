@@ -7,11 +7,11 @@ import store from './redux/configureStore';
 
 ReactDOM.render(
   <React.StrictMode>
-     <Provider store={store}>
-     <Router>
+    <Provider store={store}>
+      <Router>
         <App />
       </Router>
-     </Provider>
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root'),
 );
