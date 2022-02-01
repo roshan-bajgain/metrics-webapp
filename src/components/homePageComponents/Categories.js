@@ -6,8 +6,8 @@ const Categories = (props) => {
   const { data: { country, TotalConfirmed } } = props;
   return (
     <div className="category-top">
-      <h1>{country}</h1>
-      <h1>{TotalConfirmed}</h1>
+      <h1 className="category-country">{country}</h1>
+      <h1 className="category-infected">{TotalConfirmed}</h1>
       <FiArrowRightCircle className="arrow-icon" />
     </div>
   );
@@ -15,7 +15,7 @@ const Categories = (props) => {
 
 Categories.propTypes = {
   data: PropTypes.shape({
-    infected: PropTypes.number,
+    TotalConfirmed: PropTypes.number,
     country: PropTypes.string,
   }).isRequired,
 };
