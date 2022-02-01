@@ -1,31 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
 .category-top {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: rgb(189, 51, 104);
-    margin: 0;
-    border: 1px solid rgb(165, 30, 82);
-    width: 49.5%;
-    height: 200px;
-    font-family: 'Gill Sans', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgb(189, 51, 104);
+  margin: 0;
+  border: 1px solid rgb(165, 30, 82);
+  width: 49.5%;
+  height: 200px;
+  font-family: 'Gill Sans', sans-serif;
 }
 
 .category-country {
-    font-weight: 100;
-    font-size: 35px;
-  }
-  
-  .category-infected {
-    font-weight: 100;
-    margin: 0;
-    font-size: 20px;
-  }
-  
-  .arrow-icon {
-    position: absolute;
-    right: 20px;
-    top: 20px;
-    font-size: 25px;
-  }
+  font-weight: 100;
+  font-size: 35px;
+}
+
+.category-infected {
+  font-weight: 100;
+  margin: 0;
+  font-size: 20px;
+}
+
+.arrow-icon {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  font-size: 25px;
+}
