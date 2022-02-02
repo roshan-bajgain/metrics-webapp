@@ -62,5 +62,7 @@ const DetailsPage = () => {
         </div>
       </main>
     </>
-  )
-}
+  );
+};
+
+export default DetailsPage;
