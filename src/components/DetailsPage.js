@@ -1,8 +1,7 @@
-import React from "react";
-import { useLocation } from "react-router-dom";
-import { useSelector, useDispatch } from "react-redux";
+import React from 'react';
+import { useLocation, NavLink } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
 import { IoMdArrowRoundBack } from '@react-icons/all-files/io/IoMdArrowRoundBack';
-import { NavLink } from 'react-router-dom';
 import Header from './Header';
 import Footer from './Footer';
 import Banner from '../asset/Banner.jpg';
@@ -19,12 +18,12 @@ const DetailsPage = () => {
   const countryData = covid19Data.filter((data) => data.Country.localeCompare(countryName) === 0);
   return (
     <>
-     <>
-      <Header heading={countryName} />
-      {covid19Data.length === 0 && (
+      <>
+        <Header heading={countryName} />
+        {covid19Data.length === 0 && (
         <p>Something went wrong!</p>
-      )}
-      {
+        )}
+        {
         covid19Data.length > 0 && (
         <main>
           <NavLink to="/">
@@ -71,8 +70,8 @@ const DetailsPage = () => {
         </main>
         )
     }
-      <Footer />
-    </>
+        <Footer />
+      </>
     </>
   );
 };

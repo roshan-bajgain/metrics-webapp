@@ -1,5 +1,6 @@
-import Header from './components/Header';
+import { Routes, Route } from 'react-router-dom';
 import HomePage from './components/HomePage';
+import DetailsPage from './components/DetailsPage';
 import './styles/header.css';
 import './styles/app.css';
 import './styles/homePage.css';
