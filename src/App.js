@@ -6,12 +6,17 @@ import './styles/homePage.css';
 import './styles/categories.css';
 
 function App() {
-  const heading = 'COVID19 statestics';
   return (
-    <div className="App">
-      <Header heading={heading} />
-      <HomePage />
-    </div>
+    <Routes>
+      <Route
+        path="/"
+        element={(<HomePage />)}
+      />
+      <Route
+        path="/:Country"
+        element={(<DetailsPage />)}
+      />
+    </Routes>
   );
 }
 
