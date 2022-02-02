@@ -11,8 +11,8 @@
 .details-div {
   display: flex;
   justify-content: space-between;
-  background: rgb(189, 51, 104);
-  border: 1px solid #112b80;
+  background: rgb(131, 12, 58);
+  border: 1px solid rgb(231, 10, 95) ;
 }
 
 .details-div:nth-child(even) {
