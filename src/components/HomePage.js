@@ -1,9 +1,10 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { v4 as uuidv4 } from 'uuid';
 import Banner from '../asset/Banner.jpg';
 import { fetchDataApi } from '../redux/covid19Data/covid19Data';
 import Categories from './homePageComponents/Categories';
+import Header from './Header';
+import Footer from './Footer';
 
 const HomePage = () => {
   const heading = 'COVID19 statestics';
@@ -14,6 +15,8 @@ const HomePage = () => {
     dispatch(fetchDataApi());
   }, [dispatch]);
   return (
+    <>
+    <Header heading={heading} />
     <main>
       <div className="banner-div">
         <img src={Banner} alt="COVID-19" className="img-banner" />
@@ -38,6 +41,8 @@ const HomePage = () => {
       }
       </div>
     </main>
+    <Footer />
+    </>
   );
 };
 
