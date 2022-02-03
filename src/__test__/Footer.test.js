@@ -5,12 +5,12 @@ import Footer from '../components/Footer';
 
 describe('Footer tests', () => {
   test('should render', () => {
-    const header = render(
+    const footer = render(
       <BrowserRouter>
         <Footer />
       </BrowserRouter>,
     );
 
-    expect(header).toMatchSnapshot();
+    expect(footer).toMatchSnapshot();
   });
 });

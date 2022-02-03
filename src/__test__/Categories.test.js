@@ -9,12 +9,12 @@ describe('Categories tests', () => {
       country: 'India',
       TotalConfirmed: 1000,
     };
-    const Categories = render(
+    const categories = render(
       <BrowserRouter>
         <Categories data={data} />
       </BrowserRouter>,
     );
 
-    expect(Categories).toMatchSnapshot();
+    expect(categories).toMatchSnapshot();
   });
 });
