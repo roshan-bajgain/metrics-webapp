@@ -7,7 +7,7 @@
 ## Screenshots:
  - Home-Page
 ![screenshot](./src/asset/screenshoot1.png)
- - details-page
+ - Details-page
 ![screenshot](./src/asset/screenshoot2.png)
 
 ## Built With
