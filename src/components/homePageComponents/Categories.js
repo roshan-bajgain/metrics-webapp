@@ -9,9 +9,11 @@ const Categories = (props) => {
     <div className="category-top">
       <h1 className="category-country">{Country}</h1>
       <h1 className="category-infected">{TotalConfirmed}</h1>
-      <NavLink to={{
-        pathname: `/${Country}`, Country,
-      }}
+      <NavLink
+        className="nav1"
+        to={{
+          pathname: `/${Country}`, Country,
+        }}
       >
         {' '}
         <FiArrowRightCircle className="arrow-icon" />

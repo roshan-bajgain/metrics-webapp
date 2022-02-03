@@ -30,3 +30,13 @@
   top: 20px;
   font-size: 25px;
 }
+
+.nav1 {
+  color: white;
+}
+
+@media screen and (min-width: 992px) {
+  .category-top {
+    width: 49.8%;
+  }
+}

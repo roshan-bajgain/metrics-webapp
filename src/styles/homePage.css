@@ -8,7 +8,7 @@
 
 .img-banner {
   width: 50vw;
-  height: 30vh;
+  height: 35vh;
 }
 
 .banner-h2 {
@@ -41,4 +41,9 @@
 .categories {
   display: flex;
   flex-wrap: wrap;
+}
+
+.banner-details {
+  display: flex;
+  flex-direction: column;
 }

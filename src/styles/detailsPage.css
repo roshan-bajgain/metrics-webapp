@@ -12,7 +12,7 @@
   display: flex;
   justify-content: space-between;
   background: rgb(131, 12, 58);
-  border: 1px solid rgb(231, 10, 95) ;
+  border: 1px solid rgb(231, 10, 95);
 }
 
 .details-div:nth-child(even) {
