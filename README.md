@@ -19,7 +19,7 @@
 
 ## Online live link
 
-[Visit project online](https://covid19-metrics-thecodechaser.netlify.app)
+[Visit project online](https://compassionate-mcnulty-d1bb1e.netlify.app)
 
 ## Getting Started
 
