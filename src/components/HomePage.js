@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import Banner from '../asset/Banner.jpg';
 import { fetchDataApi } from '../redux/covid19Data/covid19Data';
-import Categories from './homePageComponents/Categories';
+import  Countries from './homePageComponents/Countries';
 import Header from './Header';
 import Footer from './Footer';
 
@@ -36,7 +36,7 @@ const HomePage = () => {
         <div className="categories">
           {
           covidData.map((data) => (
-            <Categories key={data.ID} data={data} />
+            <Countries key={data.ID} data={data} />
           ))
       }
         </div>
