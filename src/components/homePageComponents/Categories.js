@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { FiArrowRightCircle } from '@react-icons/all-files/fi/FiArrowRightCircle';
 import { NavLink } from 'react-router-dom';
 
-const Countries = (props) => {
+const Categories = (props) => {
   const { data: { Country, TotalConfirmed } } = props;
   return (
     <div className="category-top">
@@ -27,4 +27,4 @@ Categories.propTypes = {
   }).isRequired,
 };
 
-export default Countries;
+export default Categories;
