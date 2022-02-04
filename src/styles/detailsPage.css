@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+.back-icon {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: #fff;
+  font-size: 20px;
+}
+
+.details-div {
+  display: flex;
+  justify-content: space-between;
+  background: rgb(131, 12, 58);
+  border: 1px solid rgb(231, 10, 95);
+}
+
+.details-div:nth-child(even) {
+  background: rgb(156, 14, 69);
+}
+
+.detail-name,
+.detail-data {
+  margin: 20px;
+  color: #fff;
+  font-size: 20px;
+  font-family: 'Gill Sans', sans-serif;
+  font-weight: 100;
+}
