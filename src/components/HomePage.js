@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import Banner from '../asset/Banner.jpg';
 import { fetchDataApi } from '../redux/covid19Data/covid19Data';
@@ -7,6 +7,7 @@ import Header from './Header';
 import Footer from './Footer';
 
 const HomePage = () => {
+  const [searchText, setSearchText] = useState('');
   const heading = 'COVID19 statestics';
   const covidData = useSelector((state) => state.covid19Data.countriesData);
   const globalData = useSelector((state) => state.covid19Data.globalData);
@@ -14,6 +15,15 @@ const HomePage = () => {
   useEffect(() => {
     dispatch(fetchDataApi());
   }, [dispatch]);
+
+  const searchFilter = (e) => {
+    setSearchText(e.target.value);
+  };
+  const filtered = covidData.filter((item) => Object.keys(item).some((key) => item[key]
+    .toString()
+    .toLowerCase()
+    .includes(searchText.toLocaleLowerCase())));
+
   return (
     <>
       <Header heading={heading} />
@@ -32,12 +42,12 @@ const HomePage = () => {
         </div>
         <div className="search-bar">
           <h3 className="search-bar-h3">Search</h3>
-          <input type="text" placeholder="Search" className="search-bar-input" />
+          <input onChange={searchFilter} type="text" placeholder="Search" className="search-bar-input" value={searchText} />
           <h4 className="search-bar-h4">STATS BY COUNTRY</h4>
         </div>
         <div className="categories">
           {
-          covidData.map((data) => (
+          filtered.map((data) => (
             <Categories key={data.ID} data={data} />
           ))
       }
